@@ -1,0 +1,6 @@
+serviços de gabinete => 30, 32, 34, 37
+serviços de consumo => 44
+
+Regras:
+--- Serviços de gabinete adiciona tarifa de consumo;
+--- Setado isencaoOcupacao ou addArcondicionado adiciona o serviço de arcondicionado

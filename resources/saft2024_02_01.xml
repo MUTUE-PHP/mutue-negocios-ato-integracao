@@ -1,0 +1,127 @@
+<xmp>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditFile
+        xmlns="urn:OECD:StandardAuditFile-Tax:AO_1.01_01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:OECD:StandardAuditFile-Tax:AO_1.01_01 SAFTAO1.01_01.xsd">
+
+        <Header>
+            <AuditFileVersion>1.01_01</AuditFileVersion>
+            <CompanyID>5000977381</CompanyID>
+            <TaxRegistrationNumber>5000977381</TaxRegistrationNumber>
+            <TaxAccountingBasis>F</TaxAccountingBasis>
+            <CompanyName>MUTUE SOLUÇÕES TECNOLÓGICAS INTELIGENTES LDA</CompanyName>
+            <BusinessName>MUTUE SOLUÇÕES TECNOLÓGICAS INTELIGENTES LDA</BusinessName>
+            <CompanyAddress>
+                <AddressDetail>RUA NOSSA SENHORA DA MUXIMA, Nº 10-8º ANDAR</AddressDetail>
+                <City>Luanda</City>
+                <Country>AO</Country>
+            </CompanyAddress>
+            <FiscalYear>2024</FiscalYear>
+            <StartDate>2024-03-01</StartDate>
+            <EndDate>2024-03-01</EndDate>
+            <CurrencyCode>AOA</CurrencyCode>
+            <DateCreated>2024-03-01</DateCreated>
+            <TaxEntity>Global</TaxEntity>
+            <ProductCompanyTaxID>5000977381</ProductCompanyTaxID>
+            <SoftwareValidationNumber>384/AGT/2022</SoftwareValidationNumber>
+            <ProductID>MUTUE_NEGOCIOS/MUTUE SOLUÇÕES TECNOLOGICAS INTELIGENTES LDA</ProductID>
+            <ProductVersion>1.0.0</ProductVersion>
+            <Telephone>922969192</Telephone>
+            <Email>geral@mutue.net</Email>
+            <Website>mutue.net</Website>
+        </Header>
+        <MasterFiles>
+            <Customer>
+                <CustomerID>1</CustomerID>
+                <AccountID>Desconhecido</AccountID>
+                <CustomerTaxID>999999999</CustomerTaxID>
+                <CompanyName>Consumidor Final</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Desconhecido</AddressDetail>
+                    <City>Desconhecido</City>
+                    <PostalCode>Desconhecido</PostalCode>
+                    <Country>Desconhecido</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+            <Customer>
+                <CustomerID>3</CustomerID>
+                <AccountID>31.1.2.1.3</AccountID>
+                <CustomerTaxID>54176617919</CustomerTaxID>
+                <CompanyName>NGONGO THOMAS &amp;  FILHOS COMERCIO GERAL LTD</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Rua Santos Nº18, Bairro Cassenda</AddressDetail>
+                    <City>Luanda</City>
+                    <PostalCode>*</PostalCode>
+                    <Country>AO</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+            <Customer>
+                <CustomerID>264</CustomerID>
+                <AccountID>31.1.2.1.4</AccountID>
+                <CustomerTaxID>5403084690</CustomerTaxID>
+                <CompanyName>GRUPO LIZ - COMERCIO E SERVIÇOS, LIMITADA</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Bairro Cassenda - Rua 02, Casa nº 12, Maianga</AddressDetail>
+                    <City>Luanda</City>
+                    <PostalCode>*</PostalCode>
+                    <Country>AO</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+            <Customer>
+                <CustomerID>265</CustomerID>
+                <AccountID>31.1.2.1.5</AccountID>
+                <CustomerTaxID>5401071809</CustomerTaxID>
+                <CompanyName>DHL Global Forwarding Angola Ltd</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Avenida 21 de Janeiro  Aeroporto</AddressDetail>
+                    <City>Luanda</City>
+                    <PostalCode>*</PostalCode>
+                    <Country>AO</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+            <Customer>
+                <CustomerID>266</CustomerID>
+                <AccountID>31.1.2.1.6</AccountID>
+                <CustomerTaxID>5403005862</CustomerTaxID>
+                <CompanyName>Panalpina Transportes Mundiais Navegação e Transitos SA</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Rua Kima Kienda 106, Estr. da Boavista – Luanda</AddressDetail>
+                    <City>Luanda</City>
+                    <PostalCode>*</PostalCode>
+                    <Country>AO</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+            <Customer>
+                <CustomerID>267</CustomerID>
+                <AccountID>31.1.2.1.7</AccountID>
+                <CustomerTaxID>5417323659</CustomerTaxID>
+                <CompanyName>MULTIFLIGHT LDA</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Av. Revolução de Outubro, Bloco 47 B-3 Andar</AddressDetail>
+                    <City>Luanda</City>
+                    <PostalCode>*</PostalCode>
+                    <Country>AO</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+            <Customer>
+                <CustomerID>268</CustomerID>
+                <AccountID>31.1.2.1.8</AccountID>
+                <CustomerTaxID>5402032955</CustomerTaxID>
+                <CompanyName>CELTA SERVIÇOS &amp; COMÉRCIO, LDA</CompanyName>
+                <BillingAddress>
+                    <AddressDetail>Rua Fernando Pessoa, Nº52</AddressDetail>
+                    <City>Luanda</City>
+                    <PostalCode>*</PostalCode>
+                    <Country>AO</Country>
+                </BillingAddress>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+            </Customer>
+        </MasterFiles>
+    </AuditFile>
+</xmp>
