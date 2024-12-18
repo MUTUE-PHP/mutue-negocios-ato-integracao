@@ -6,8 +6,10 @@ use App\Application\UseCase\Empresa\CentrosDeCusto\GetCentrosCustoSemPaginacao;
 use App\Application\UseCase\Empresa\Produtos\EliminarProduto;
 use App\Application\UseCase\Empresa\Produtos\GetProdutos;
 use App\Application\UseCase\Empresa\Produtos\GetProdutosPeloCentroCusto;
+use App\Domain\Entity\Empresa\Produtos\Produto;
 use App\Http\Controllers\empresa\ReportShowController;
 use App\Infra\Factory\Empresa\DatabaseRepositoryFactory;
+use App\Models\empresa\Produto as EmpresaProduto;
 use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -100,6 +102,9 @@ class ProdutoIndexController extends Component
         $getprodutos = new GetProdutosPeloCentroCusto(new DatabaseRepositoryFactory());
         $data['produtos'] = $getprodutos->execute($this->filter);
         $this->dispatchBrowserEvent('reloadTableJquery');
+
+        $data['totalProduto'] = EmpresaProduto::count();
+
         return view('empresa.produtos.index', $data);
     }
     public function imprimirProdutos()
@@ -114,7 +119,7 @@ class ProdutoIndexController extends Component
                 'report_parameters' => [
                     'empresa_id' => auth()->user()->empresa_id,
                     'diretorio' => $logotipo,
-                    'centroCustoId' => session()->get('centroCustoId')
+                    'centroCustoId' => 1
                 ]
             ]
         );

@@ -78,7 +78,7 @@ use Illuminate\Support\Str;
                             </div>
 
                             <div class="table-header widget-header">
-                                Todos os produtos/serviços do sistema (Total:{{count($produtos)}})
+                                Todos os produtos/serviços do sistema Total: <strong>{{ $totalProduto }}</strong>
 
                             </div>
 

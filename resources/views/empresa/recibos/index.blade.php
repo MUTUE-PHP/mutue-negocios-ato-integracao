@@ -90,7 +90,7 @@
 
                        
                         <div class="table-header widget-header">
-                            Todas recibos do sistema (Total:{{count($recibos)}})
+                            Todas de Recibos do sistema Total: <strong>{{$totalRecibos}}</strong>
                         </div>
 
                         <!-- div.dataTables_borderWrap -->

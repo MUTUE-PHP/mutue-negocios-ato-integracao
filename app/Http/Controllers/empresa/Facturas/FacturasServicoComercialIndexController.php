@@ -49,10 +49,11 @@ class FacturasServicoComercialIndexController extends Component
         $this->facturaRepository = $facturaRepository;
         $this->parametroRepository = $parametroRepository;
     }
-    public function imprimirFaturasAeroportuário($formato){
+    public function imprimirServicoComercias($formato){
 
+       
         $logotipo = public_path() . '/upload//' . auth()->user()->empresa->logotipo;
-        $filename = "faturaAeroportuarios";
+        $filename = "faturaServicosComercias";
         $reportController = new ReportShowController($formato);
         $report = $reportController->show(
             [
@@ -73,7 +74,7 @@ class FacturasServicoComercialIndexController extends Component
             $headers = array(
                 'Content-Type: application/xls',
             );
-            return \Illuminate\Support\Facades\Response::download($report['filename'], 'faturas-aeroportuario.xls', $headers);
+            return \Illuminate\Support\Facades\Response::download($report['filename'], 'faturas-Serviços-Comercias.xls', $headers);
         }
     }
 
@@ -89,7 +90,7 @@ class FacturasServicoComercialIndexController extends Component
             ->search(trim($this->search))
             ->paginate();
 
-
+            $data['totalFactura'] = Factura::where('tipoFatura', 4)->count();
         $this->dispatchBrowserEvent('reloadTableJquery');
         return view('empresa.facturas.facturasServicosComerciaisIndex', $data);
     }

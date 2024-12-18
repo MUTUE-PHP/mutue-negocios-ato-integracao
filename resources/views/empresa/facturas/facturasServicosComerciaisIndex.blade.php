@@ -27,7 +27,10 @@
                                         <span class="ace-icon fa fa-search icon-on-right bigger-130"></span>
                                     </button>
                                 </span>
+
+                               
                             </div>
+                          
                         </div>
                     </div>
                 </form>
@@ -40,6 +43,15 @@
 
                         <div class="col-xs-12 widget-box widget-color-green" style="left: 0%">
                             <div class="clearfix" style="display: flex;padding: 5px 5px; align-items: center">
+
+                                <div class="clearfix" style="display: flex;padding: 5px 5px; align-items: center">   <a title="imprimir faturas Comercias" href="#" wire:click.prevent="imprimirServicoComercias('pdf')" class="btn btn-primary widget-box widget-color-blue" id="botoes">
+                                    <span wire:loading wire:target="imprimirServicoComercias('pdf')" class="loading"></span>
+                                    <i class="fa fa-print text-default"></i> Imprimir PDF
+                                </a>
+                                <a title="imprimir faturas aeroportuário" href="#" wire:click.prevent="imprimirServicoComercias('xls')" class="btn btn-primary widget-box widget-color-blue" id="botoes">
+                                    <span wire:loading wire:target="imprimirServicoComercias('xls')" class="loading"></span>
+                                    <i class="fa fa-print text-default"></i> Imprimir EXCEL
+                                </a> </div>
                                 <div class="input-group input-group-sm" style="margin-left: 10px; width: 300px">
                                     <select wire:model="filter.tipoDocumentoId" data="tipoDocumentoId"
                                             class="col-md-12 select2">
@@ -79,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="table-header widget-header">
-                                Todas as facturas do sistema
+                                Todas as facturas do sistema Total: <strong>{{$totalFactura}}</strong>
                             </div>
                             <div>
                                 <table class="tabela1 table table-striped table-bordered table-hover">

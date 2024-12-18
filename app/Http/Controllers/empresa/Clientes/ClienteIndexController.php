@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\empresa\Clientes;
 
 use App\Http\Controllers\empresa\ReportShowController;
+use App\Models\empresa\Cliente;
 use App\Models\empresa\Pais;
 use App\Models\empresa\TiposCliente;
 use App\Repositories\Empresa\ClienteRepository;
@@ -35,8 +36,15 @@ class ClienteIndexController extends Component
     {
         $data['clientes'] = $this->clienteRepository->getClientes($this->search);
         $this->dispatchBrowserEvent('reloadTableJquery');
+
+        $data['totalCliente'] = Cliente::count();
+        
         return view('empresa.clientes.index', $data);
+
+     
     }
+
+
     public function imprimirClientes(){
         $logotipo = public_path() . '/upload//' . auth()->user()->empresa->logotipo;
         $filename = "clientes";

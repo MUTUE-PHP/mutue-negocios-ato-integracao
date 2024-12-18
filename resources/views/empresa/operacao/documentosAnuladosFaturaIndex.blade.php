@@ -20,7 +20,8 @@
                             <div class="pull-right tableTools-container"></div>
                         </div>
                         <div class="table-header widget-header">
-                            Todas notas de crédito do sistema (Total:{{ count($facturas) }})
+                            Todas notas de crédito do sistema Total: <strong>{{$totalNotaCredito}}</strong>
+                         
                         </div>
                         <div>
                             <table class="tabela1 table table-striped table-bordered table-hover">

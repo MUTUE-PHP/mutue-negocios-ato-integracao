@@ -13,6 +13,9 @@ class AnulacaoDocumentoFaturaIndexController extends Component
         $data['facturas'] = NotaCredito::with(['factura', 'user'])
             ->where('empresa_id', auth()->user()->empresa_id)
              ->paginate();
+
+             $data['totalNotaCredito'] = NotaCredito::count();
+
         return view('empresa.operacao.documentosAnuladosFaturaIndex', $data);
     }
     public function printNotaCreditoAnulacao($notaCreditoId){

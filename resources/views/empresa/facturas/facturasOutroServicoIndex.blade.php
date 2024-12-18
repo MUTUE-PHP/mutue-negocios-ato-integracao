@@ -39,7 +39,21 @@
                         <input type="hidden" name="_token" value/>
 
                         <div class="col-xs-12 widget-box widget-color-green" style="left: 0%">
+                            
+
                             <div class="clearfix" style="display: flex;padding: 5px 5px; align-items: center">
+                                <a title="imprimir faturas de cargas" href="#"
+                                wire:click.prevent="imprimirFaturaOutrosServicos('pdf')"
+                                class="btn btn-primary widget-box widget-color-blue" id="botoes">
+                                 <span wire:loading wire:target="imprimirFaturaOutrosServicos('pdf')" class="loading"></span>
+                                 <i class="fa fa-print text-default"></i> Imprimir PDF
+                             </a>
+                             <a title="imprimir faturas de cargas" href="#"
+                                wire:click.prevent="imprimirFaturaOutrosServicos('xls')"
+                                class="btn btn-primary widget-box widget-color-blue" id="botoes">
+                                 <span wire:loading wire:target="imprimirFaturaOutrosServicos('xls')" class="loading"></span>
+                                 <i class="fa fa-print text-default"></i> Imprimir EXCEL
+                             </a>
                                 <div class="input-group input-group-sm" style="margin-left: 10px; width: 300px">
                                     <select wire:model="filter.tipoDocumentoId" data="tipoDocumentoId"
                                             class="col-md-12 select2">
@@ -79,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="table-header widget-header">
-                                Todas as facturas do sistema
+                                Todas as facturas do sistema Total: <strong>{{$totalFactura}}</strong>
                             </div>
                             <div>
                                 <table class="tabela1 table table-striped table-bordered table-hover">

@@ -64,6 +64,9 @@ class ReciboIndexController extends Component
 
 
          $data['recibos'] = $this->reciboRepository->listarRecibos($this->search);
+          
+         $data['totalRecibos'] = Recibos::count();
+
         return view('empresa.recibos.index', $data);
     }
     public function printRecibo($reciboId)

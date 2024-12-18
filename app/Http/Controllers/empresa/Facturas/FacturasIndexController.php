@@ -69,8 +69,10 @@ class FacturasIndexController extends Component
             ->filter($this->filter)
             ->search(trim($this->search))
             ->paginate();
-
 //        $data['facturas'] = $this->facturaRepository->listarfacturas($this->filter);
+
+      $data['totalFacturaCarga'] = Factura::where('tipoFatura', 1)->count();
+
         $this->dispatchBrowserEvent('reloadTableJquery');
         return view('empresa.facturas.facturasIndex', $data);
     }
@@ -85,8 +87,8 @@ class FacturasIndexController extends Component
                 'report_jrxml' => $filename . '.jrxml',
                 'report_parameters' => [
                     'empresa_id' => auth()->user()->empresa_id,
-                    'tipoDocumentoId' => $this->filter['tipoDocumentoId'],
-                    'centroCustoId' => $this->filter['centroCustoId'],
+                     'tipoDocumentoId' => $this->filter['tipoDocumentoId'],
+                     'centroCustoId' => $this->filter['centroCustoId'],
                     'data_inicio' => $this->filter['dataInicial'],
                     'data_fim' => $this->filter['dataFinal'],
                     'diretorio' => $logotipo,

@@ -50,7 +50,7 @@
                                 <div class="pull-right tableTools-container"></div>
                             </div>
                             <div class="table-header widget-header">
-                                Todos os clientes do sistema (Total:{{count($clientes)}})
+                                Todos os clientes do sistema Total:   <strong>{{ $totalCliente }}</strong>
                             </div>
 
                             <!-- div.dataTables_borderWrap -->

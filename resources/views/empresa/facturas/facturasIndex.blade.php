@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="table-header widget-header">
-                                Todas as facturas do sistema
+                                Todas as facturas do sistema Total: <strong>{{$totalFacturaCarga}}</strong>
                             </div>
                             <div>
                                 <table class="tabela1 table table-striped table-bordered table-hover">

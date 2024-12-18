@@ -156,7 +156,7 @@ class ProdutoRepository
         return ProdutoDatabase::with(['tipoTaxa', 'statuGeral', 'motivoIsencao', 'categoria', 'tipoServico'])
             ->filter($filter)
             ->where('empresa_id', auth()->user()->empresa_id)
-            ->where('centroCustoId', session()->get('centroCustoId'))
+            ->where('centroCustoId',1)
             ->paginate();
     }
     public function getProduto($id)

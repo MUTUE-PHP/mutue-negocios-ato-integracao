@@ -61,10 +61,11 @@ class FacturasOutroServicoIndexController extends Component
         $this->facturaRepository = $facturaRepository;
         $this->parametroRepository = $parametroRepository;
     }
-    public function imprimirFaturasAeroportuário($formato){
-
+    public function imprimirFaturaOutrosServicos($formato){
+              
+       
         $logotipo = public_path() . '/upload//' . auth()->user()->empresa->logotipo;
-        $filename = "WinmarketOutroServico";
+        $filename = "faturaOutrosServicos";
         $reportController = new ReportShowController($formato);
         $report = $reportController->show(
             [
@@ -104,7 +105,7 @@ class FacturasOutroServicoIndexController extends Component
             ->paginate();
 
 
-
+            $data['totalFactura'] = Factura::where('tipoFatura', 3)->count();
         $this->dispatchBrowserEvent('reloadTableJquery');
         return view('empresa.facturas.facturasOutroServicoIndex', $data);
     }

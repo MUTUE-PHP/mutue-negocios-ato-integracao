@@ -108,6 +108,7 @@ class FacturasAeroportuarioIndexController extends Component
 
 
         $this->dispatchBrowserEvent('reloadTableJquery');
+        $data['totalFactura'] = Factura::where('tipoFatura', 2)->count();
         return view('empresa.facturas.facturasAeroportuarioIndex', $data);
     }
     public function imprimirFactura($facturaId)
